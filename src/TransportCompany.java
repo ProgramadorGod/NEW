@@ -101,6 +101,7 @@ public class TransportCompany {
                     break;
 
                 case 3:
+                    boolean done = false;
                     System.out. println("What's the ID of the Vehicle ? : ");
                     int Asker = 0;
                     try {
@@ -116,6 +117,7 @@ public class TransportCompany {
                         if(Integer.parseInt(aefinal) == Asker){
                             Cars.remove(Cars.get(i));
                             System.out.println("Car removed successfully.");
+                            done = true;
                         }
 
                     }
@@ -127,6 +129,7 @@ public class TransportCompany {
                         if(Integer.parseInt(aefinal) == Asker){
                             Vans.remove(Vans.get(i));
                             System.out.println("Car removed successfully.");
+                            done = true;
                         }
 
                     }
@@ -138,8 +141,12 @@ public class TransportCompany {
                         if(Integer.parseInt(aefinal) == Asker){
                             Trucks.remove(Trucks.get(i));
                             System.out.println("Car removed successfully.");
+                            done = true;
                         }
 
+                    }
+                    if(done == false){
+                        System.out.println("We couldn't find the Vehicle. Try again later with a valid ID...");
                     }
 
 
