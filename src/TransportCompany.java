@@ -81,27 +81,21 @@ public class TransportCompany {
                     }
                     break;
                 case 2:
-                    int TrucksMount = 0;
+                    int TrucksMount = Trucks.size();
                     System.out.print("Trucks: ");
-                    for (int i = 0; i < Trucks.size(); i++) {
-                        TrucksMount += 1;
-                    }
+
                     System.out.println(TrucksMount);
                     System.out.println(Trucks);
 
-                    int VansMount = 0;
+                    int VansMount = Vans.size();
                     System.out.print("Vans: ");
-                    for (int i = 0; i < Vans.size(); i++) {
-                        VansMount += 1;
-                    }
+
                     System.out.println(VansMount);
                     System.out.println(Vans);
 
-                    int CarsMount = 0;
+                    int CarsMount = Cars.size();
                     System.out.print("Cars: ");
-                    for (int i = 0; i < Cars.size(); i++) {
-                        CarsMount += 1;
-                    }
+
                     System.out.println(CarsMount);
                     System.out.println(Cars);
                     break;
