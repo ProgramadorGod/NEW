@@ -25,7 +25,7 @@ public class TransportCompany {
             System.out.println("2. Check Vehicles List. ");
             System.out.println("3. Delete Vehicle. ");
             System.out.println("4. Update Vehicle. ");
-            System.out.println("4. Exit the program");
+            System.out.println("5. Exit the program");
             int Selection = 0;
             while (true){
                 try {
