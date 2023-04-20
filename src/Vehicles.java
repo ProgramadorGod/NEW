@@ -26,12 +26,17 @@ public class Vehicles {
                         field.set(this, Value);
                         break;
                     } catch (Exception e) {
-                        System.out.print("Try again with a valid number : ");
+                        System.out.print("Try again with a valid " + field.getName() + ":");
                         in.nextLine();  //clean the buffer
                     }
                 }
             } else {
                 String Value = in.nextLine();
+                while (Value == ""){
+                    System.out.print("Insert a valid " + field.getName()+":");
+                    Value = in.nextLine();
+                }
+
                 field.set(this, Value);
             }
 

@@ -24,6 +24,7 @@ public class TransportCompany {
             System.out.println("1. Add Vehicle. ");
             System.out.println("2. Check Vehicles List. ");
             System.out.println("3. Delete Vehicle. ");
+            System.out.println("4. Update Vehicle. ");
             System.out.println("4. Exit the program");
             int Selection = 0;
             while (true){
@@ -143,7 +144,69 @@ public class TransportCompany {
                             System.out.println("Car removed successfully.");
                             done = true;
                         }
+                    }
+                    if(done == false){
+                        System.out.println("We couldn't find the Vehicle. Try again later with a valid ID...");
+                    }
 
+                    break;
+
+
+                case 4:
+                    done = false;
+                    System.out. println("What's the ID of the Vehicle ? : ");
+                    Asker = 0;
+                    try {
+                        Asker = in.nextInt();
+                    }catch (Exception e){
+                        System.out.println("We couldn't find the Vehicle. Try again later with a valid ID...");
+                    }
+
+                    for (int i = 0; i < Cars.size(); i++) {
+                        String ae = Cars.get(i).get(Cars.get(i).size()-1);
+                        String aefinal = ae.substring(ae.length()-1);
+
+                        if(Integer.parseInt(aefinal) == Asker){
+                            //updater
+                            Car c = new Car();
+                            ArrayList<String> xddd = c.CarSet();
+                            xddd.add(" ID :"+ String.valueOf(Asker));
+                            Cars.set(i,xddd);
+
+                            done = true;
+                        }
+
+                    }
+
+                    for (int i = 0; i < Vans.size(); i++) {
+                        String ae = Vans.get(i).get(Vans.get(i).size()-1);
+                        String aefinal = ae.substring(ae.length()-1);
+
+                        if(Integer.parseInt(aefinal) == Asker){
+                            //updater
+                            Van c = new Van();
+                            ArrayList<String> xddd = c.VanSet();
+                            xddd.add(" ID :"+ String.valueOf(Asker));
+                            Vans.set(i,xddd);
+
+                            done = true;
+                        }
+
+                    }
+
+                    for (int i = 0; i < Trucks.size(); i++) {
+                        String ae = Trucks.get(i).get(Trucks.get(i).size()-1);
+                        String aefinal = ae.substring(ae.length()-1);
+
+                        if(Integer.parseInt(aefinal) == Asker){
+                            //updater
+                            Truck c = new Truck();
+                            ArrayList<String> xddd = c.TruckSet();
+                            xddd.add(" ID :"+ String.valueOf(Asker));
+                            Trucks.set(i,xddd);
+
+                            done = true;
+                        }
                     }
                     if(done == false){
                         System.out.println("We couldn't find the Vehicle. Try again later with a valid ID...");
@@ -151,6 +214,7 @@ public class TransportCompany {
 
 
                     break;
+
 
                 default:
                     System.out.println("Thanks by use 'Zephyr Motors Company', we expect you've got a great experience.");
