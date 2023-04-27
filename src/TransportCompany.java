@@ -219,12 +219,6 @@ public class TransportCompany {
                     break;
 
 
-                case 5:
-
-                    
-
-                    break;
-
 
 
                 default:
