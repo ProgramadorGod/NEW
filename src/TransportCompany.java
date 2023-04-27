@@ -172,6 +172,7 @@ public class TransportCompany {
                             ArrayList<String> xddd = c.CarSet();
                             xddd.add(" ID :"+ String.valueOf(Asker));
                             Cars.set(i,xddd);
+                            System.out.println("Car updated successfully");
 
                             done = true;
                         }
@@ -188,6 +189,8 @@ public class TransportCompany {
                             ArrayList<String> xddd = c.VanSet();
                             xddd.add(" ID :"+ String.valueOf(Asker));
                             Vans.set(i,xddd);
+                            System.out.println("Car updated successfully");
+
 
                             done = true;
                         }
@@ -204,7 +207,7 @@ public class TransportCompany {
                             ArrayList<String> xddd = c.TruckSet();
                             xddd.add(" ID :"+ String.valueOf(Asker));
                             Trucks.set(i,xddd);
-
+                            System.out.println("Car updated successfully");
                             done = true;
                         }
                     }
@@ -216,11 +219,18 @@ public class TransportCompany {
                     break;
 
 
+                case 5:
+
+                    
+
+                    break;
+
+
+
                 default:
                     System.out.println("Thanks by use 'Zephyr Motors Company', we expect you've got a great experience.");
                     System.out.println("Closing...");
                     System.exit(0);
-
             }
         }
     }
